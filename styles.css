@@ -8,56 +8,45 @@ body {
   line-height: 1.6;
 }
 
-/* Navigation */
-.navbar {
-  background-color: #007BFF;
-  color: #fff;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-}
-.navbar li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 12px;
-  transition: background-color 0.3s ease;
-}
-.navbar li a:hover {
-  background-color: #0056b3;
-  border-radius: 4px;
-}
-
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('assets/imgs/background.jpg') no-repeat center center/cover;
+              url('../../assets/imgs/background.jpg') no-repeat center center/cover;
   color: #fff;
   text-align: center;
-  padding: 80px 20px;
+  padding: 120px 20px;
+  margin-bottom: 0;
 }
+
 .hero h1 {
-  font-size: 3em;
+  font-size: 65px;
+  font-weight: 500; /* More appropriate weight */
   margin-bottom: 0.3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
-.hero p {
-  font-size: 1.3em;
+
+.hero .subtitle {
+  font-size: 50px;
+  font-weight: 50;
   margin-bottom: 0.8em;
 }
 
+.hero .details {
+  font-size: 1.3rem;
+  opacity: 0.8;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero .details i {
+  margin-right: 10px;
+}
+
+
 /* Main Content Container */
 .container {
-  max-width: 1200px;
-  margin: 30px auto;
+  /* max-width: 1200px; */
+  /* margin: 30px auto; */
   background-color: #fff;
   padding: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -158,6 +147,7 @@ th {
   overflow-x: auto; /* Allow horizontal scrolling */
   scroll-snap-type: x mandatory; /* Enable snap scrolling */
   padding-bottom: 20px; /* Add padding to avoid scrollbar overlap */
+  justify-content: center; /* Center the carousel */
 }
 
 /* Organizer Card Styling */
@@ -202,24 +192,13 @@ th {
 }
 
 
-/* Footer */
-footer {
-  background-color: #f8f8f8;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #777;
-  border-top: 1px solid #ddd;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-    text-align: center;
-  }
   .speaker-grid {
     flex-direction: column;
     align-items: center;
+  }
+  .organizers-carousel {
+    justify-content: flex-start; /* Align items to the start on mobile */
   }
 }
