@@ -166,13 +166,24 @@
           <h3>Dr. Ye Yuan</h3>
           <p>NVIDIA Research</p>
         </div>
+        <div class="organizer">
+          <img src="assets/imgs/avatar_organizer_chen.jpg"/>
+          <h3>Chen Guo</h3>
+          <p>ETH Zürich</p>
+        </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>For further inquiries, please email us at <a href="mailto:info@example.com">info@example.com</a>.</p>
+      <p>For further inquiries, please email us at
+        <script>
+          const u = "tijiang";
+          const d = "ethz.ch";
+          document.write(`<a href="mailto:${u}@${d}">${u}@${d}</a>`);
+        </script>.
+      </p>
     </section>
   </div>
 </body>
